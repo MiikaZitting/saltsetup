@@ -12,6 +12,6 @@ sudo apt-get update
 sudo apt-get -y install salt-minion
 
 echo "Time to set you as a slave!"
-read -p "Give your salted machine a name: " $saltId
-echo -e 'master: 104.248.162.226\nid: saltId'|sudo tee /etc/salt/minion
+read -p "Give your salted machine a name: " saltId
+echo -e 'master: 104.248.162.226\nid: $saltId'|sudo tee /etc/salt/minion
 sudo systemctl restart salt-minion
